@@ -1,0 +1,68 @@
+#app8g{
+    height: 420px;
+    width: 300px;
+    padding: 0.75em;
+    border-radius: 5px;
+    margin: auto;
+    background-color: #363636;
+    box-shadow: 8px 5px 0px #505050;
+}
+
+#app8g form{
+    height: 100%;
+    width: 100%;
+    background-color: #363636;
+}
+
+#app8g input[type=textfield]{
+    height: 25%;
+    width: 100%;
+    margin:  10px 0;
+    cursor: default;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    padding: 1px;
+    background-color: #dfdfdf;
+    text-align: right;
+    font-size: 50px;
+    border-radius: 7px;
+    border: 0;
+    outline: none;
+}
+
+#app8g input[type=button], input[type=reset]{
+    width: 22%;
+    cursor: pointer;
+    font-size: 26px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: black;
+    padding: 16px;
+    margin: 3px;
+    border: 0;
+    border-radius: 15px;
+    transition: 100ms all;
+}
+
+#app8g .orange{
+    background-color: #ffca68;
+    color: aliceblue ;
+    box-shadow: 0px 3px 0px #b9882d;
+}
+
+#app8g .gray{
+    background-color:#e7af47;
+    box-shadow: 0px 3px 0px #b1822c;
+    color: aliceblue;
+}
+
+#app8g .white {
+    background-color:#FFF;
+    box-shadow: 0px 3px 0px #AAA;
+}
+
+#app8g .gray:active,  #app8g .orange:active,  #app8g .white:active{
+    transition: 75ms all;
+    transform: translateY(3px);
+    box-shadow: 0 0 0 ;
+}
