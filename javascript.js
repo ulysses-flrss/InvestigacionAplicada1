@@ -1,71 +1,68 @@
-let operador = "";
+let operador;
+const txtField = document.getElementById('textField');
 
-let numUno = document.getElementById("numUno").addEventListener("click", () => {mostrarNum(1)});
-let numDos = document.getElementById("numDos").addEventListener("click", () => {mostrarNum(2)});
-let numTres = document.getElementById("numTres").addEventListener("click", () => {mostrarNum(3)});
-let numCuatro = document.getElementById("numCuatro").addEventListener("click", () => {mostrarNum(4)});
-let numCinco = document.getElementById("numCinco").addEventListener("click", () => {mostrarNum(5)});
-let numSeis = document.getElementById("numSeis").addEventListener("click", () => {mostrarNum(6)});
-let numSiete = document.getElementById("numSiete").addEventListener("click", () => {mostrarNum(7)});
-let numOcho = document.getElementById("numOcho").addEventListener("click", () => {mostrarNum(8)});
-let numNueve = document.getElementById("numNueve").addEventListener("click", () => {mostrarNum(9)});
-let numCero = document.getElementById("numCero").addEventListener("click", () => {mostrarNum(0)});
-let signoSuma = document.getElementById("signoSuma").addEventListener("click", () => {mostrarNum("+"); operador = "+"});
-let signoResta = document.getElementById("signoMenos").addEventListener("click", () => {mostrarNum("-"); operador = "-"});
-let signoMultiplicacion = document.getElementById("signoMultiplicacion").addEventListener("click", () => {mostrarNum("x"); operador = "x"});
-let signoDivision = document.getElementById("signoDivision").addEventListener("click", () => {mostrarNum("÷"); operador = "÷"});
-let txtField = document.getElementById("textField", mostrarNum)
-let eliminarNum = document.getElementById("eliminarNum").addEventListener("click", () => {txtField.value = ""});
-
-
-let signoIgual = document.getElementById("signoIgual");
-signoIgual.addEventListener("click", igual)
-
-function mostrarNum (num) {
-    txtField.value += num;
+function mostrarNum(num) {
+  txtField.value += num;
 }
 
-function operaciones (a, b, ...c) { //Sumar
+function operaciones(a, b, ...c) {
+  let operacion;
 
-    if (operador === "+") {
-        let suma = Number(a) + Number(b);
-    
-        c.forEach(n => {
-            suma += Number(n);
-        })
-        
-        return suma;
+  if (operador === '+') {
+    operacion = Number(a) + Number(b);
 
-    } else if (operador === "-") {
-        let resta = Number(a) - Number(b);
+    c.forEach((n) => {
+      operacion += Number(n);
+    });
+  } else if (operador === '-') {
+    operacion = Number(a) - Number(b);
 
-        c.forEach(n => {
-            resta -= Number(n);
-        })
-        
-        return resta;
+    c.forEach((n) => {
+      operacion -= Number(n);
+    });
+  } else if (operador === 'x') {
+    c.forEach((n) => {
+      operacion *= Number(n);
+    });
+  } else if (operador === '÷') {
+    operacion = Number(a) / Number(b);
 
-    } else if (operador === "x") {
-        let multiplicacion = Number(a) * Number(b);
+    c.forEach((n) => {
+      operacion = Number(n);
+    });
+  }
 
-        c.forEach(n => {
-            multiplicacion *= Number(n);
-        })
+  return operacion;
+}
 
-        return multiplicacion;
-
-    } else if (operador === "÷") {
-        let division = Number(a) / Number(b);
-
-        c.forEach(n => {
-        division = Number(n);
-    })
-    
-        return division;
+function igual() {
+  if (txtField.value === '') {
+  } else {
+    if (operador === '') {
+      txtField.value;
+    } else {
+      const arr = txtField.value.split(operador);
+      txtField.value = operaciones(...arr);
     }
+  }
 }
 
-function igual () { 
-    let arr = txtField.value.split(operador);
-    txtField.value = operaciones(...arr);
-}
+document.getElementById('numUno').addEventListener('click', () => { mostrarNum(1); });
+document.getElementById('numDos').addEventListener('click', () => { mostrarNum(2); });
+document.getElementById('numTres').addEventListener('click', () => { mostrarNum(3); });
+document.getElementById('numCuatro').addEventListener('click', () => { mostrarNum(4); });
+document.getElementById('numCinco').addEventListener('click', () => { mostrarNum(5); });
+document.getElementById('numSeis').addEventListener('click', () => { mostrarNum(6); });
+document.getElementById('numSiete').addEventListener('click', () => { mostrarNum(7); });
+document.getElementById('numOcho').addEventListener('click', () => { mostrarNum(8); });
+document.getElementById('numNueve').addEventListener('click', () => { mostrarNum(9); });
+document.getElementById('numCero').addEventListener('click', () => { mostrarNum(0); });
+document.getElementById('signoSuma').addEventListener('click', () => { mostrarNum('+'); operador = '+'; });
+document.getElementById('signoMenos').addEventListener('click', () => { mostrarNum('-'); operador = '-'; });
+document.getElementById('signoMultiplicacion').addEventListener('click', () => { mostrarNum('÷'); operador = '÷'; });
+document.getElementById('signoDivision').addEventListener('click', () => { mostrarNum('÷'); operador = '÷'; });
+
+document.getElementById('eliminarNum').addEventListener('click', () => { txtField.value = ''; });
+
+const signoIgual = document.getElementById('signoIgual');
+signoIgual.addEventListener('click', igual);

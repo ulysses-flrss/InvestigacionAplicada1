@@ -1,9 +1,14 @@
+@font-face {
+    font-family: "Calculator";
+    src: url(fonts/Calculator.ttf);
+}
 #app8g{
     height: 420px;
     width: 300px;
     padding: 0.75em;
     border-radius: 5px;
-    margin: auto;
+    margin: 75px auto;
+    justify-content: center;
     background-color: #363636;
     box-shadow: 8px 5px 0px #505050;
 }
@@ -19,12 +24,12 @@
     width: 100%;
     margin:  10px 0;
     cursor: default;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Calculator";
     color: black;
-    padding: 1px;
+    padding: 1px;    
     background-color: #dfdfdf;
     text-align: right;
-    font-size: 50px;
+    font-size: 70px;
     border-radius: 7px;
     border: 0;
     outline: none;
@@ -33,8 +38,8 @@
 #app8g input[type=button], input[type=reset]{
     width: 22%;
     cursor: pointer;
-    font-size: 26px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    font-family: "Calculator";
     font-weight: bold;
     color: black;
     padding: 16px;
