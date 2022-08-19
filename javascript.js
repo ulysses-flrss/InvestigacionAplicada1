@@ -1,4 +1,6 @@
-let operador;
+alert("La calculadora unicamente puede hacer operaciones con un mismo operador");
+
+let operador = '';
 const txtField = document.getElementById('textField');
 
 function mostrarNum(num) {
@@ -39,7 +41,7 @@ function igual() {
   if (txtField.value === '') {
   } else {
     if (operador === '') {
-      txtField.value;
+      
     } else {
       const arr = txtField.value.split(operador);
       txtField.value = operaciones(...arr);
@@ -66,3 +68,5 @@ document.getElementById('eliminarNum').addEventListener('click', () => { txtFiel
 
 const signoIgual = document.getElementById('signoIgual');
 signoIgual.addEventListener('click', igual);
+
+
