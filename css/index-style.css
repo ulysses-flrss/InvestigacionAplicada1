@@ -1,10 +1,93 @@
 @font-face {
     font-family: "Calculator";
-    src: url(fonts/Calculator.ttf);
+    src: url(../fonts/Calculator.ttf);
 }
+
+
+nav{
+    position: relative;
+    margin: 0 auto 0;
+    width: 790px;
+    height: 50px;
+    background-color: #34495e;
+    border-radius: 8px;
+    font-size: 0;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+}
+
+nav a{
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+}
+
+nav .animation{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    background: #1abc9c;
+    border-radius: 8px;
+    transition: all .5s ease 0s;
+}
+
+nav a:nth-child(1){
+    width: 200px;
+
+}
+
+nav .star-home, a:nth-child(1):hover~.animation{
+    width: 200px;
+    left: 0;
+}
+
+nav a:nth-child(2){
+    width: 110px;
+}
+
+nav  a:nth-child(2):hover~.animation{
+    width: 110px;
+    left: 200px;
+}
+
+nav a:nth-child(3){
+    width: 200px;
+}
+
+nav  a:nth-child(3):hover~.animation{
+    width: 200px;
+    left: 310px;
+}
+
+nav a:nth-child(4){
+    width: 275px;
+}
+
+nav  a:nth-child(4):hover~.animation{
+    width: 275px;
+    left: 515px;
+}
+
+nav a:nth-child(5){
+    width: 120px;
+}
+
+nav  a:nth-child(5):hover~.animation{
+    width: 120px;
+    left: 470px;
+}
+
+
+
 #app8g{
     height: 420px;
-    width: 300px;
+    width: 310px;
     padding: 0.75em;
     border-radius: 5px;
     margin: 75px auto;

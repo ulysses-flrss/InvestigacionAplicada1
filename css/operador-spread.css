@@ -1,0 +1,18 @@
+body {
+    padding: 2em;
+    text-align: justify;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 4em !important;
+}
+
+.parrafo {
+    font-size: 1.20em;
+}
+
+img {
+    margin: 1em 20em;
+}
+

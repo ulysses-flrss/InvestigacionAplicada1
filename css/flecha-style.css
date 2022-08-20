@@ -1,0 +1,16 @@
+.titulo {
+    font-size: 3em !important;
+}
+
+.code {
+    font-weight: bold;
+}
+
+.parrafo {
+    font-size: 1.20em;
+}
+
+section {
+    padding: 2em;
+    text-align: justify;
+}

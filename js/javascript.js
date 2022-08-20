@@ -23,6 +23,7 @@ function operaciones(a, b, ...c) {
       operacion -= Number(n);
     });
   } else if (operador === 'x') {
+    operacion = Number(a) * Number(b);
     c.forEach((n) => {
       operacion *= Number(n);
     });
@@ -30,7 +31,7 @@ function operaciones(a, b, ...c) {
     operacion = Number(a) / Number(b);
 
     c.forEach((n) => {
-      operacion = Number(n);
+      operacion /= Number(n);
     });
   }
 
@@ -61,7 +62,7 @@ document.getElementById('numNueve').addEventListener('click', () => { mostrarNum
 document.getElementById('numCero').addEventListener('click', () => { mostrarNum(0); });
 document.getElementById('signoSuma').addEventListener('click', () => { mostrarNum('+'); operador = '+'; });
 document.getElementById('signoMenos').addEventListener('click', () => { mostrarNum('-'); operador = '-'; });
-document.getElementById('signoMultiplicacion').addEventListener('click', () => { mostrarNum('÷'); operador = '÷'; });
+document.getElementById('signoMultiplicacion').addEventListener('click', () => { mostrarNum('x'); operador = 'x'; });
 document.getElementById('signoDivision').addEventListener('click', () => { mostrarNum('÷'); operador = '÷'; });
 
 document.getElementById('eliminarNum').addEventListener('click', () => { txtField.value = ''; });

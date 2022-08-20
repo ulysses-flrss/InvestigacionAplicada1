@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Función Flecha</title>
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/flecha-style.css">
+
+</head>
+<body>
+    <nav>
+        <a href="buenas-practicas-diego.html">BUENAS PRACTICAS</a>
+        <a href="eslinting-ayala.html">LINTING</a>
+        <a href="flechaparte-christophercortez.html">FUNCIÓN FLECHA</a>
+        <a href="operador-spread-fernando.html">OPERADOR SPREAD</a>
+        <a href="index.html">EJEMPLO</a>
+        <div class="animation start-home"></div>
+    </nav>
+
+    <section>
+        <h3 class="titulo">Funciones Flechas</h3>
+        <p class="parrafo">
+            Una expresión de función flecha es una alternativa compacta a una expresión de función tradicional, pero es limitada y no se puede utilizar en todas las situaciones. 
+            Diferencias y limitaciones: No tiene sus propios enlaces a this o super y no se debe usar como métodos. No tiene argumentos o palabras clave new. Las arrow functions son una nueva forma de expresar
+            funciones, además de las declaradas y las expresiones funcionales (al igual que estas, no se alzan). Al principio cuesta visualmente acostumbrarse ya que se usan sobre todo en una única sentencia, es decir, todo el cuerpo de la función es una
+            única línea.</p>
+            <p class="parrafo">
+            ● No apta para los métodos call, apply y bind, que generalmente se basan en establecer un ámbito o alcance <br>
+            ● No se puede utilizar como constructor.<br>
+            ● No se puede utilizar yield dentro de su cuerpo
+        </p>
+        <br>
+
+        <h3 class="titulo">Sintaxis básica.</h3>
+        <p class="parrafo" >Un parámetro. Con una expresión simple no se necesita return:<br>
+        <b>param => expression</b> <br><br>
+        Varios parámetros requieren paréntesis. Con una expresión simple no se necesita
+        return:<br>
+        <b>(param1, paramN) => expression</b> <br><br>
+        Las declaraciones de varias líneas requieren corchetes y return:<br><br>
+        <b>
+            param => {<br>
+                let a = 1;<br>
+                return a + b;<br>
+                }<br><br>
+        </b> 
+            
+        Varios parámetros requieren paréntesis. Las declaraciones de varias líneas
+        requieren corchetes y return:<br><br>
+        <b>
+            (param1, paramN) => {<br>
+            let a = 1;<br>
+            return a + b;<br>
+            }<br>
+        </b>
+        </p>
+        <br>
+    </section>
+    <br>
+</body>
+</html>

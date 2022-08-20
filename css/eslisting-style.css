@@ -1,0 +1,30 @@
+div {
+    padding: 2em;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+p, ul {
+    font-size: 1.20em;
+}
+
+li {
+    font-weight: bold;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+img {
+    width: 20em;
+}
+
+.row {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 5em;
+}
